@@ -5,15 +5,16 @@ export default function About() {
   return (
     <section id="about" className="section-pad py-20 sm:py-28">
       <div className="mx-auto grid max-w-content gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
-        <SectionHeader kicker="About" title={`Meet ${business.ownerHandle}`} />
+        <SectionHeader kicker="About" title={`Meet ${business.ownerName}`} />
 
         <div className="grid gap-8 sm:grid-cols-2">
           <div className="space-y-4 text-[17px] leading-relaxed text-stone">
             <p>
-              {business.ownerHandle} is an independent Herbalife distributor
-              based in {business.location.city}, helping customers access
-              genuine nutrition and wellness products and learn how to use
-              them well.
+              {business.ownerName} — known to many of her customers as{" "}
+              {business.ownerHandle} — is an {business.legalDescription}{" "}
+              based in {business.location.city}, helping customers across
+              Ghana access genuine nutrition and wellness products and
+              learn how to use them well.
             </p>
             <p>
               Beyond the products themselves, she offers coaching, meal
@@ -29,7 +30,7 @@ export default function About() {
               with.&rdquo;
             </p>
             <p className="mt-5 text-sm text-stone">
-              {business.ownerHandle} · {business.legalDescription}
+              {business.ownerName} · {business.legalDescription}
             </p>
           </div>
         </div>

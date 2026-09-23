@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="animate-reveal">
           <p className="inline-flex items-center gap-1.5 rounded-full bg-moss/10 px-3.5 py-1.5 text-sm font-medium text-moss">
             <MapPin size={14} strokeWidth={2.25} aria-hidden="true" />
-            {business.location.city}
+            {business.serviceArea}
           </p>
 
           <h1 className="mt-6 max-w-xl text-[2.6rem] font-display font-medium leading-[1.06] tracking-[-0.01em] text-balance sm:text-5xl lg:text-[3.4rem]">
@@ -47,7 +47,7 @@ export default function Hero() {
 
           <p className="mt-9 flex items-center gap-2 text-sm text-stone">
             <Leaf size={15} className="text-moss" aria-hidden="true" />
-            {business.legalDescription} · {business.location.name}
+            {business.legalDescription} · Based in {business.location.city}
           </p>
         </div>
 

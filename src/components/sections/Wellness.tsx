@@ -1,15 +1,30 @@
 import Image from "next/image";
-import { Apple, Sparkles, Droplets, Activity } from "lucide-react";
-import { wellnessCategories } from "@/data/business";
+import {
+  TrendingDown,
+  Activity,
+  TrendingUp,
+  Dumbbell,
+  Coffee,
+  Sparkles,
+  Scissors,
+  Droplets,
+  Target,
+} from "lucide-react";
+import { productGoals } from "@/data/business";
 import SectionHeader from "@/components/SectionHeader";
-import ProductCategoryCard from "@/components/ProductCategoryCard";
+import GoalTile from "@/components/GoalTile";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const icons = {
-  nutrition: Apple,
-  wellness: Droplets,
-  "personal-care": Sparkles,
-  lifestyle: Activity,
+  "weight-loss": TrendingDown,
+  "flat-tummy": Activity,
+  "weight-gain": TrendingUp,
+  "muscle-building": Dumbbell,
+  "healthy-breakfast": Coffee,
+  "skin-care": Sparkles,
+  "hair-care": Scissors,
+  "stretch-marks": Droplets,
+  "nutritional-goals": Target,
 } as const;
 
 const productImages = [
@@ -31,26 +46,30 @@ export default function Wellness() {
   return (
     <section id="wellness" className="section-pad py-20 sm:py-28">
       <div className="mx-auto max-w-content">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
             <SectionHeader
               kicker="Products"
-              title="Nutrition, wellness & personal care"
-              description="Genuine Herbalife products across a few simple categories. Looking for something specific? Reach out on WhatsApp for current availability and pricing."
+              title="What are you working toward?"
+              description="Genuine Herbalife products across every goal, whichever you're working on. Tell us which applies to you, and we'll guide you from there."
             />
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {wellnessCategories.map((category) => (
-                <ProductCategoryCard
-                  key={category.id}
-                  icon={icons[category.id]}
-                  title={category.title}
-                  description={category.description}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {productGoals.map((goal) => (
+                <GoalTile
+                  key={goal.id}
+                  icon={icons[goal.id]}
+                  title={goal.title}
                 />
               ))}
             </div>
 
-            <div className="mt-10">
+            <p className="mt-6 text-sm text-stone">
+              Looking for something specific? Reach out on WhatsApp for
+              current availability and pricing.
+            </p>
+
+            <div className="mt-6">
               <WhatsAppButton ctaId="wellness" label="Ask About Products" />
             </div>
           </div>
@@ -61,7 +80,7 @@ export default function Wellness() {
                 src={productImages[0].src}
                 alt={productImages[0].alt}
                 fill
-                sizes="(min-width: 1024px) 560px, 90vw"
+                sizes="(min-width: 1024px) 480px, 90vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -70,7 +89,7 @@ export default function Wellness() {
                 src={productImages[1].src}
                 alt={productImages[1].alt}
                 fill
-                sizes="(min-width: 1024px) 270px, 45vw"
+                sizes="(min-width: 1024px) 230px, 45vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -79,7 +98,7 @@ export default function Wellness() {
                 src={productImages[2].src}
                 alt={productImages[2].alt}
                 fill
-                sizes="(min-width: 1024px) 270px, 45vw"
+                sizes="(min-width: 1024px) 230px, 45vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>

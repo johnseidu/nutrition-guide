@@ -6,7 +6,7 @@ import {
   ClipboardList,
   Package,
 } from "lucide-react";
-import { services } from "@/data/business";
+import { services, business } from "@/data/business";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -37,6 +37,15 @@ export default function Services() {
               icon={icons[service.id]}
               title={service.title}
               description={service.description}
+              link={
+                service.id === "community"
+                  ? {
+                      href: business.whatsappCommunityLink,
+                      label: "Join the WhatsApp group",
+                      ctaId: "services-community-card",
+                    }
+                  : undefined
+              }
             />
           ))}
         </div>

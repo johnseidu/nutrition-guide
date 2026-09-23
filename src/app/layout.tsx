@@ -20,26 +20,29 @@ const workSans = Work_Sans({
 });
 
 const siteUrl = "https://nutritionguide.xyz";
-const title = "Nutrition Guide by Small Madam | Herbalife Distributor, Kumasi";
+const title =
+  "nutritionguide by MisScilla Thecoach | Herbalife Independent Distributor, Ghana";
 const description =
-  "Nutrition and wellness support from an independent Herbalife distributor in Kumasi, Ghana. Coaching, meal plans, and doorstep delivery across Ghana.";
+  "Nutrition and wellness support from an Independent Herbalife Distributor based in Kumasi, serving customers across Ghana. Coaching, meal plans, and doorstep delivery nationwide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
   keywords: [
-    "Herbalife distributor Kumasi",
-    "nutrition coaching Kumasi",
+    "Herbalife distributor Ghana",
+    "Herbalife independent distributor Ghana",
+    "nutrition coaching Ghana",
     "wellness products Ghana",
-    "Herbalife Ghana",
+    "Herbalife Kumasi",
     "nutrition support Ghana",
+    "weight loss coach Ghana",
   ],
   openGraph: {
     title,
     description,
     url: siteUrl,
-    siteName: "Nutrition Guide by Small Madam",
+    siteName: "nutritionguide by MisScilla Thecoach",
     images: ["/images/hero-priscilla.jpg"],
     locale: "en_GH",
     type: "website",

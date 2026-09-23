@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { business } from "@/data/business";
 import WhatsAppButton from "./WhatsAppButton";
@@ -31,12 +32,21 @@ export default function Header() {
           : "border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-content items-center justify-between section-pad py-4">
-        <a href="#top" className="flex flex-col leading-tight">
-          <span className="font-display text-lg font-semibold tracking-tight">
-            {business.brandName}
+      <div className="mx-auto flex max-w-content items-center justify-between section-pad py-3.5">
+        <a href="#top" className="flex items-center gap-2.5">
+          <Image
+            src="/images/logo-icon.png"
+            alt=""
+            width={38}
+            height={38}
+            className="h-9 w-9 flex-shrink-0"
+          />
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-lg font-semibold tracking-tight">
+              {business.brandName}
+            </span>
+            <span className="text-xs text-stone">{business.brandTagline}</span>
           </span>
-          <span className="text-xs text-stone">{business.brandTagline}</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

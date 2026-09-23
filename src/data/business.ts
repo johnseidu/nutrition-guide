@@ -2,11 +2,12 @@
 // Update details here and they will flow through the entire site.
 
 export const business = {
-  brandName: "Nutrition Guide",
-  brandTagline: "by Small Madam",
+  brandName: "nutritionguide",
+  brandTagline: "by MisScilla Thecoach",
+  brandSuffix: "(Herbalife Independent Distributor)",
   legalDescription: "Independent Herbalife Distributor",
-  ownerName: "Priscilla",
-  ownerHandle: "Small Madam",
+  ownerName: "MisScilla",
+  ownerHandle: "Small Madam", // how customers already know and greet her
 
   location: {
     name: "TeamSupport NutriHub",
@@ -14,6 +15,9 @@ export const business = {
     line2: "Adjacent to Fidelity Bank",
     city: "Kumasi, Ghana",
   },
+
+  // Physical base is Kumasi, but delivery and service area is nationwide.
+  serviceArea: "Serving customers across Ghana",
 
   phoneDisplay: "053 837 3518",
   phoneIntl: "+233538373518", // used for tel: and wa.me links
@@ -41,6 +45,9 @@ export const business = {
 
   whatsappMessage:
     "Hello Small Madam, I found your website and would like to learn more about your nutrition and wellness products.",
+
+  whatsappCommunityLink:
+    "https://chat.whatsapp.com/HiHsI2xTRpCI3iptSNbhQF?mode=gi_t",
 } as const;
 
 export const services = [
@@ -82,30 +89,17 @@ export const services = [
   },
 ] as const;
 
-export const wellnessCategories = [
-  {
-    id: "nutrition",
-    title: "Nutrition",
-    description:
-      "Everyday nutrition support to help you meet your goals, one habit at a time.",
-  },
-  {
-    id: "wellness",
-    title: "Wellness",
-    description:
-      "Products and guidance to support your energy, hydration, and overall balance.",
-  },
-  {
-    id: "personal-care",
-    title: "Personal Care",
-    description: "Skin and body care formulated to fit into a healthy routine.",
-  },
-  {
-    id: "lifestyle",
-    title: "Lifestyle",
-    description:
-      "Small, sustainable changes that support a more active, consistent lifestyle.",
-  },
+// Goal-based product categories customers ask about most.
+export const productGoals = [
+  { id: "weight-loss", title: "Weight Loss" },
+  { id: "flat-tummy", title: "Flat Tummy" },
+  { id: "weight-gain", title: "Weight Gain" },
+  { id: "muscle-building", title: "Muscle Building" },
+  { id: "healthy-breakfast", title: "Healthy Breakfast" },
+  { id: "skin-care", title: "Skin Care" },
+  { id: "hair-care", title: "Hair Care" },
+  { id: "stretch-marks", title: "Stretch Marks" },
+  { id: "nutritional-goals", title: "Personal Nutritional Goals" },
 ] as const;
 
 export const steps = [
@@ -134,3 +128,25 @@ export const steps = [
       "Stay connected for coaching, meal plans, and ongoing encouragement.",
   },
 ] as const;
+
+// Testimonial photos, grouped as agreed with the client.
+// "owner" = Small Madam's own personal transformation.
+// "customer" = results from customers, shared with permission.
+export const ownerTestimonials = [
+  { id: "owner-1", src: "/images/testimonials/owner-1.jpg", alt: "Small Madam's personal wellness transformation, photo 1" },
+  { id: "owner-2", src: "/images/testimonials/owner-2.jpg", alt: "Small Madam's personal wellness transformation, photo 2" },
+  { id: "owner-3", src: "/images/testimonials/owner-3.jpg", alt: "Small Madam's personal wellness transformation, before and after" },
+] as const;
+
+export const customerTestimonials = [
+  { id: "customer-1", src: "/images/testimonials/customer-1.jpg", alt: "Customer transformation result, before and after" },
+  { id: "customer-2", src: "/images/testimonials/customer-2.jpg", alt: "Customer transformation result, before and after" },
+  { id: "customer-3", src: "/images/testimonials/customer-3.jpg", alt: "Customer weight loss transformation over 8 months" },
+  { id: "customer-4", src: "/images/testimonials/customer-4.jpg", alt: "Customer fitness transformation result" },
+  { id: "customer-5", src: "/images/testimonials/customer-5.jpg", alt: "Customer wellness transformation, before and after" },
+  { id: "customer-6", src: "/images/testimonials/customer-6.jpg", alt: "Customer wellness transformation, before and after" },
+  { id: "customer-7", src: "/images/testimonials/customer-7.jpg", alt: "Customer wellness transformation, before and after" },
+] as const;
+
+export const testimonialDisclaimer =
+  "People who replace two meals a day with Herbalife Nutrition Formula 1 as part of a healthy lifestyle (such as lowering caloric intake, eating a healthy, balanced diet, or engaging in regular physical activity) can generally expect to lose around half a pound to 1 pound per week. Individual results will vary.";
