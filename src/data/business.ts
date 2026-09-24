@@ -17,7 +17,7 @@ export const business = {
   },
 
   // Physical base is Kumasi, but delivery and service area is nationwide.
-  serviceArea: "Serving customers across Ghana",
+   serviceArea: "Serving customers across Ghana and beyond",
 
   phoneDisplay: "053 837 3518",
   phoneIntl: "+233538373518", // used for tel: and wa.me links

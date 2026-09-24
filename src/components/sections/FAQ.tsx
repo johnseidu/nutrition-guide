@@ -32,6 +32,11 @@ const questions = [
     answer:
       "Results vary from person to person. Your routine, food choices, activity, consistency, and starting point all matter, so we focus on realistic and sustainable progress.",
   },
+  {
+    question: "When will I see results?",
+    answer:
+      "Changes can start to show within 21 days, while optimum results become clearer by 90 days with consistency and discipline, coupled with a healthy, active lifestyle.",
+  },
 ] as const;
 
 export default function FAQ() {

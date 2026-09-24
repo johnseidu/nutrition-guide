@@ -8,7 +8,7 @@ const siteUrl = "https://nutritionguide.xyz";
 const title =
   "nutritionguide by MisScilla Thecoach | Herbalife Independent Distributor, Ghana";
 const description =
-  "Nutrition and wellness support from an Independent Herbalife Distributor based in Kumasi, serving customers across Ghana. Coaching, meal plans, and doorstep delivery nationwide.";
+  "Nutrition and wellness support from an Independent Herbalife Distributor based in Kumasi, serving customers across Ghana and beyond. Coaching, meal plans, and doorstep delivery nationwide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
