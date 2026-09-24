@@ -14,8 +14,8 @@ export default function HowItWorks() {
     <section className="section-pad bg-moss py-20 text-ivory sm:py-28">
       <div className="mx-auto max-w-content">
         <SectionHeader
-          kicker="How it works"
-          title="From first message to ongoing support"
+          kicker="How to purchase"
+          title="From order to doorstep"
         />
 
         <div className="relative mt-16 grid gap-y-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4 lg:gap-x-8">

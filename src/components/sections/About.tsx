@@ -13,8 +13,8 @@ export default function About() {
               {business.ownerName} — known to many of her customers as{" "}
               {business.ownerHandle} — is an {business.legalDescription}{" "}
               based in {business.location.city}, helping customers across
-              Ghana access genuine nutrition and wellness products and
-              learn how to use them well.
+              Ghana access genuine nutrition and wellness products and guiding
+              them on how to use those products to have a desired result.
             </p>
             <p>
               Beyond the products themselves, she offers coaching, meal

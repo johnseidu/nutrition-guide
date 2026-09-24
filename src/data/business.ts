@@ -90,42 +90,122 @@ export const services = [
 ] as const;
 
 // Goal-based product categories customers ask about most.
+// Each may include real product images and a short, honest description
+// based only on what's shown/printed on the product itself — no invented
+// claims. Clicking a tile opens a detail view with a goal-specific
+// WhatsApp message pre-filled.
 export const productGoals = [
-  { id: "weight-loss", title: "Weight Loss" },
-  { id: "flat-tummy", title: "Flat Tummy" },
-  { id: "weight-gain", title: "Weight Gain" },
-  { id: "muscle-building", title: "Muscle Building" },
-  { id: "healthy-breakfast", title: "Healthy Breakfast" },
-  { id: "skin-care", title: "Skin Care" },
-  { id: "hair-care", title: "Hair Care" },
-  { id: "stretch-marks", title: "Stretch Marks" },
-  { id: "nutritional-goals", title: "Personal Nutritional Goals" },
+  {
+    id: "weight-loss",
+    title: "Weight Loss",
+    images: ["/images/products/weight-loss.jpg"],
+    description:
+      "Herbalife's Weight Loss & Belly Fat range — including starter, body, and belly-focused packs — to support your weight loss goals as part of a healthy, balanced lifestyle.",
+  },
+  {
+    id: "flat-tummy",
+    title: "Flat Tummy",
+    images: ["/images/products/weight-loss.jpg"],
+    description:
+      "Belly-focused packs such as Belly Blaster and Belly & Detox, designed to support flat-tummy goals alongside a healthy diet and regular activity.",
+  },
+  {
+    id: "weight-gain-muscle-building",
+    title: "Weight Gain & Muscle Building",
+    images: ["/images/products/weight-gain.jpg"],
+    description:
+      "Herbalife's Build & Grow range — shake-based packs to support healthy weight gain and muscle development alongside regular training.",
+  },
+  {
+    id: "healthy-breakfast",
+    title: "Healthy Breakfast",
+    images: ["/images/products/healthy-breakfast.jpg"],
+    description:
+      "Formula 1 Healthy Meal — a balanced meal replacement shake mix for busy mornings, available in a range of flavours.",
+  },
+  {
+    id: "hair-skin-care",
+    title: "Hair & Skin Care",
+    images: ["/images/products/skin-care.jpg"],
+    description:
+      "Hair and skin care products to support healthy hair and skin as part of your daily routine. Ask us for current availability.",
+  },
+  {
+    id: "healthy-aging",
+    title: "Healthy Aging",
+    images: ["/images/products/healthy-aging.jpg"],
+    description:
+      "Herbalife's Healthy Aging range — Xtra-Cal, Herbalifeline Max (Omega-3), Collagen Skin Booster, and Niteworks — supporting bone, heart, skin, and vascular health as you age.",
+  },
+  {
+    id: "nutritional-goals",
+    title: "Personal Nutritional Goals",
+    images: [
+      "/images/products/nutritional-goals-1.jpg",
+      "/images/products/nutritional-goals-2.jpg",
+    ],
+    description:
+      "Protein Drink Mix and Formula 3 Personalised Protein Powder — simple ways to boost your daily protein intake as part of a plan built around your own goals.",
+  },
+  {
+    id: "digestive-health",
+    title: "Digestive Health",
+    images: ["/images/products/digestive-health.jpg"],
+    description:
+      "Herbal Aloe Concentrate, Oat Apple Fibre, and AloeMax — Herbalife's Digestive Health range, supporting everyday digestive wellness.",
+  },
+  {
+    id: "energy-fitness",
+    title: "Energy & Fitness",
+    images: ["/images/products/energy-fitness.jpg"],
+    description:
+      "Instant Herbal Tea, LiftOff, and Phyto Complete — Herbalife's Energy & Fitness range to support energy throughout an active day.",
+  },
+  {
+    id: "heart-health",
+    title: "Heart Health",
+    images: ["/images/products/heart-health.jpg"],
+    description:
+      "Herbalifeline Max — an Omega-3 food supplement (EPA and DHA) formulated to support normal heart function as part of a balanced diet.",
+  },
+  {
+    id: "business-opportunity",
+    title: "Fantastic Business Opportunity",
+    images: [
+      "/images/products/business-opportunity-1.jpg",
+      "/images/products/business-opportunity-2.jpg",
+    ],
+    description:
+      "Anyone can become a Herbalife Independent Distributor — students, working parents, and retirees alike. Training and support are provided; building a business still takes hard work and dedication.",
+  },
 ] as const;
+
+export type ProductGoal = (typeof productGoals)[number];
 
 export const steps = [
   {
     number: "01",
-    title: "Share Your Goals",
+    title: "Order",
     description:
-      "Reach out on WhatsApp and tell Small Madam what you're hoping to work on.",
+      "Place your order easily and securely through our system.",
   },
   {
     number: "02",
-    title: "Choose Your Products & Support",
+    title: "Pay",
     description:
-      "Get guidance on the products and support options that fit your goals and budget.",
+      "Make your payment through our convenient and trusted payment options.",
   },
   {
     number: "03",
-    title: "Receive Your Order",
+    title: "Receive",
     description:
-      "Your order is delivered to your doorstep, anywhere in Ghana.",
+      "Your order is carefully packed and prepared for delivery.",
   },
   {
     number: "04",
-    title: "Continue With Personalized Support",
+    title: "Delivered",
     description:
-      "Stay connected for coaching, meal plans, and ongoing encouragement.",
+      "We deliver your package safely and on time to your doorstep.",
   },
 ] as const;
 

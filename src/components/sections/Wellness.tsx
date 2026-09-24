@@ -1,31 +1,8 @@
 import Image from "next/image";
-import {
-  TrendingDown,
-  Activity,
-  TrendingUp,
-  Dumbbell,
-  Coffee,
-  Sparkles,
-  Scissors,
-  Droplets,
-  Target,
-} from "lucide-react";
 import { productGoals } from "@/data/business";
 import SectionHeader from "@/components/SectionHeader";
-import GoalTile from "@/components/GoalTile";
+import GoalGrid from "@/components/GoalGrid";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-const icons = {
-  "weight-loss": TrendingDown,
-  "flat-tummy": Activity,
-  "weight-gain": TrendingUp,
-  "muscle-building": Dumbbell,
-  "healthy-breakfast": Coffee,
-  "skin-care": Sparkles,
-  "hair-care": Scissors,
-  "stretch-marks": Droplets,
-  "nutritional-goals": Target,
-} as const;
 
 const productImages = [
   {
@@ -51,17 +28,23 @@ export default function Wellness() {
             <SectionHeader
               kicker="Products"
               title="What are you working toward?"
-              description="Genuine Herbalife products across every goal, whichever you're working on. Tell us which applies to you, and we'll guide you from there."
+              description="Tap a goal to see the products behind it and ask Small Madam directly — genuine Herbalife products for every goal below."
             />
 
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {productGoals.map((goal) => (
-                <GoalTile
-                  key={goal.id}
-                  icon={icons[goal.id]}
-                  title={goal.title}
-                />
-              ))}
+            <aside className="mt-8 rounded-2xl border border-clay/25 bg-clay/10 p-5 text-sm leading-relaxed text-cocoa">
+              <p className="font-semibold uppercase tracking-[0.14em] text-clay">
+                Important disclaimer
+              </p>
+              <p className="mt-2">
+                These products are food and nutritional supplements, not drugs
+                or medicine. They do not cure or treat any condition. Food
+                provides nutrition, and your body uses nutrition to support its
+                normal functions.
+              </p>
+            </aside>
+
+            <div className="mt-10">
+              <GoalGrid goals={productGoals} />
             </div>
 
             <p className="mt-6 text-sm text-stone">

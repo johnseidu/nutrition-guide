@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
-import { Fraunces, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  variable: "--font-work-sans",
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
 
 const siteUrl = "https://nutritionguide.xyz";
 const title =
@@ -63,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${workSans.variable}`}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />
