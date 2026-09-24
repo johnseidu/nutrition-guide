@@ -7,6 +7,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Community from "@/components/sections/Community";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Delivery from "@/components/sections/Delivery";
+import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Community />
       <HowItWorks />
       <Delivery />
+      <FAQ />
       <Contact />
     </>
   );

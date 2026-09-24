@@ -37,6 +37,7 @@ export const business = {
     tiktok: {
       label: "Small Madam – Herbalife",
       handle: "@smallmadam.herbalife",
+      url: "https://www.tiktok.com/@coachmiscilla3?_r=1&_t=ZS-99zOxKeA9dk",
     },
     facebook: {
       label: "MisScilla Thecoach",

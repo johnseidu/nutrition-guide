@@ -46,6 +46,8 @@ export default function Footer() {
             offerings.
           </p>
         </div>
+
+        <p className="text-center text-xs text-stone">Developed by Light</p>
       </div>
     </footer>
   );
